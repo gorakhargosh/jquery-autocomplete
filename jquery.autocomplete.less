@@ -1,0 +1,43 @@
+@autocomplete-image-dropdown-shadow: url('shadow.png');
+@autocomplete-border-color: #999;
+@autocomplete-background-color: #FFF;
+@autocomplete-selected-background-color: #F0F0F0;
+@autocomplete-match-color: #3399FF;
+
+.autocomplete-w1 {
+    background: @autocomplete-image-dropdown-shadow no-repeat bottom right;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 8px 0 0 6px;
+    /* IE6 fix: */
+    _background: none;
+    _margin: 0;
+}
+
+.autocomplete {
+    border: 1px solid @autocomplete-border-color;
+    background: @autocomplete-background-color;
+    cursor: default;
+    text-align: left;
+    max-height: 350px;
+    overflow: auto;
+    margin: -6px 6px 6px -6px;
+    /* IE6 specific: */
+    _height: 350px;
+    _margin: 0;
+    _overflow-x: hidden;
+
+    .selected {
+        background: @autocomplete-selected-background-color;
+    }
+
+    div {
+        padding: 2px 5px;
+        white-space: nowrap;
+    }
+    strong {
+        font-weight: normal;
+        color: @autocomplete-match-color;
+    }
+}
